@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "chatworkPecoSearch",
+  "version": "1.1",
+  "permissions": [
+    "https://kcw.kddi.ne.jp/*",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": ["https://kcw.kddi.ne.jp/*"],
+    "js": ["jquery-3.1.1.min.js","main.js"],
+    "run_at": "document_end"
+  }]
+}
